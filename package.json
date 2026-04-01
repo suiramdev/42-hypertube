@@ -1,0 +1,37 @@
+{
+  "name": "hypertube",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm -r dev",
+    "build": "pnpm -r build",
+    "check-types": "pnpm -r check-types",
+    "dev:web": "pnpm --filter web dev",
+    "db:push": "pnpm --filter @hypertube/db db:push",
+    "db:studio": "pnpm --filter @hypertube/db db:studio",
+    "db:generate": "pnpm --filter @hypertube/db db:generate",
+    "db:migrate": "pnpm --filter @hypertube/db db:migrate",
+    "db:start": "pnpm --filter @hypertube/db db:start",
+    "db:watch": "pnpm --filter @hypertube/db db:watch",
+    "db:stop": "pnpm --filter @hypertube/db db:stop",
+    "db:down": "pnpm --filter @hypertube/db db:down",
+    "check": "oxlint && oxfmt --write"
+  },
+  "dependencies": {
+    "@hypertube/env": "workspace:*",
+    "dotenv": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@hypertube/config": "workspace:*",
+    "@types/node": "^22.13.14",
+    "oxfmt": "^0.26.0",
+    "oxlint": "^1.41.0",
+    "typescript": "^5"
+  },
+  "packageManager": "pnpm@10.28.2"
+}

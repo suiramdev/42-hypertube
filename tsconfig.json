@@ -1,0 +1,3 @@
+{
+  "extends": "@hypertube/config/tsconfig.base.json"
+}

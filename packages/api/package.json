@@ -1,0 +1,29 @@
+{
+  "name": "@hypertube/api",
+  "type": "module",
+  "exports": {
+    ".": {
+      "default": "./src/index.ts"
+    },
+    "./*": {
+      "default": "./src/*.ts"
+    }
+  },
+  "scripts": {},
+  "dependencies": {
+    "@hypertube/auth": "workspace:*",
+    "@hypertube/db": "workspace:*",
+    "@hypertube/env": "workspace:*",
+    "@orpc/client": "catalog:",
+    "@orpc/openapi": "catalog:",
+    "@orpc/server": "catalog:",
+    "@orpc/zod": "catalog:",
+    "dotenv": "catalog:",
+    "next": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@hypertube/config": "workspace:*",
+    "typescript": "^5"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "@hypertube/auth",
+  "type": "module",
+  "exports": {
+    ".": {
+      "default": "./src/index.ts"
+    },
+    "./*": {
+      "default": "./src/*.ts"
+    }
+  },
+  "scripts": {},
+  "dependencies": {
+    "@hypertube/db": "workspace:*",
+    "@hypertube/env": "workspace:*",
+    "better-auth": "catalog:",
+    "dotenv": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@hypertube/config": "workspace:*",
+    "typescript": "^5"
+  }
+}
